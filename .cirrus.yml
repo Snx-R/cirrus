@@ -1,0 +1,28 @@
+env:
+    CIRRUS_CLONE_DEPTH: 1
+    rom_name: Nusantara
+    device: lavender
+    TELEGRAM_ID: $tg_id
+    BOT_API: $bot_api
+
+task:
+  name: "Snx-R"
+  timeout_in: 240m
+  container:
+      image: snaxpsycho/aosp:latest
+      # image: snaxpsycho/crave:ubuntu
+      # image: snaxpsycho/cirrus:latest
+      cpu: 8
+      memory: 32G
+      stateful: true
+      greedy: true
+      volumes:
+          - /home/cirrus:/home/cirrus
+          - /home/cirrus/ccache:/home/cirrus/ccache
+          - /home/cirrus/.config:/home/cirrus/.config
+          
+  vanilla_script:
+    - sudo apt install jq curl -y
+    - mkdir Nusantara && cd Nusantara
+    - git clone https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/Snx -b cirrus
+    - bash Snx/build.sh --sync -gf
