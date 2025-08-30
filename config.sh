@@ -9,10 +9,6 @@ export TZ=Asia/Dhaka
 
 lunch nad_lavender-user
 make installclean
-# export SELINUX_IGNORE_NEVERALLOWS=true
-# make api-stubs-docs || echo no problem
-# make system-api-stubs-docs || echo no problem
-# make test-api-stubs-docs || echo no problem
 mka nad
 export RELEASE=no
 Snx-R
