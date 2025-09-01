@@ -6,9 +6,10 @@ git clone https://github.com/Sa-Sajjad/manifest.git --depth 1 -b ten-ksu .repo/l
 repo sync -j$(nproc --all) --no-clone-bundle --no-tags --optimized-fetch --prune
 
 source build/envsetup.sh
-export USE_GAPPS=true
+cd device/xiaomi/lavender
+bash setup-makesfiles.sh
+cd -
+cd vendor/xiaomi/lavender
+git add .;git commit -sm "lavender: sync with device tree";git push
 lunch nad_lavender-user
-make installclean
-mka nad
-export RELEASE=no
 Snx-R
