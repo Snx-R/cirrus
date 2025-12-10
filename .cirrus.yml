@@ -20,7 +20,6 @@ task:
           - /home/cirrus/.config:/home/cirrus/.config
           
   vanilla_script:
-    - sudo apt install jq curl -y
     - mkdir Nusantara && cd Nusantara
     - git clone https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/Snx -b cirrus
     - bash Snx/build.sh --sync -gf
