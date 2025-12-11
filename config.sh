@@ -1,18 +1,12 @@
 # add repo, dt, vt, kt etc.
-repo init --depth=1 --no-repo-verify -u https://Snax-phycho:$ght@github.com/Nusantara-SiXtY-N9/android_manifest_nusa.git -b 10
+repo init -u ssh://git@github.com/keepQASSA/manifest -b Q --git-lfs
 # replace with your manifest
-git clone git@github.com:Snax-phycho/manifest.git --depth 1 -b ten-ksu .repo/local_manifests
+git clone https://github.com/Sa-Sajjad/manifest.git -b qassa .repo/local_manifests
 # sync script
-repo sync -j$(nproc --all) --no-clone-bundle --no-tags --optimized-fetch --prune
+repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 source build/envsetup.sh
 export TZ=Asia/Dhaka
-
-lunch nad_lavender-user
-make installclean
-# export SELINUX_IGNORE_NEVERALLOWS=true
-# make api-stubs-docs || echo no problem
-# make system-api-stubs-docs || echo no problem
-# make test-api-stubs-docs || echo no problem
-mka nad
+lunch qassa_lavender-user
+mka qassa
 export RELEASE=no
 Snx-R
