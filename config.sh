@@ -6,6 +6,9 @@ git clone https://github.com/Sa-Sajjad/manifest.git --depth 1 -b ten-ksu .repo/l
 repo sync -j$(nproc --all) --no-clone-bundle --no-tags --optimized-fetch --prune
 
 source build/envsetup.sh
+export USE_CCACHE=1
+ccache -M 50G
+ccache -s
 export USE_GAPPS=true
 lunch nad_lavender-user
 make installclean

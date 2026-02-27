@@ -20,10 +20,11 @@ task:
           - /home/cirrus/.config:/home/cirrus/.config
           
   cache_script:
-    - sudo apt update && sudo apt install cache
+    - sudo apt update && sudo apt install ccache
 
   storage_script:
     - df -h .
+    - free -h
 
   vanilla_script:
     - mkdir Nusantara && cd Nusantara
