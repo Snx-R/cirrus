@@ -19,6 +19,12 @@ task:
           - /home/cirrus/ccache:/home/cirrus/ccache
           - /home/cirrus/.config:/home/cirrus/.config
           
+  cache_script:
+    - sudo apt update && sudo apt install cache
+
+  storage_script:
+    - df -h .
+
   vanilla_script:
     - mkdir Nusantara && cd Nusantara
     - git clone https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/Snx -b cirrus
