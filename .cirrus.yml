@@ -27,6 +27,5 @@ task:
     - free -h
 
   vanilla_script:
-    - mkdir Nusantara && cd Nusantara
-    - git clone https://Sa-Sajjad:$ght@github.com/Sa-Sajjad/Snx -b cirrus
-    - bash Snx/build.sh --sync -gf
+    - mkdir Arrow && cd Arrow
+    - curl https://gist.githubusercontent.com/Sa-Sajjad/b5dcfe1b1cd422144d6a09e1286bd4a2/raw/arrow.sh | bash
