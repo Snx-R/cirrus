@@ -5,7 +5,6 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 cd kernel/xiaomi/lavender
 curl -LSs "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh" | bash -s legacy
 cd -
-rm -rf prebuilts/clang/host/linux-x86/clang-3289846
 
 source build/envsetup.sh
 lunch arrow_lavender-user
