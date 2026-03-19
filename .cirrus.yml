@@ -9,7 +9,8 @@ task:
   name: "Snx-R"
   timeout_in: 240m
   container:
-      image: ghcr.io/snx-r/cirrus:latest
+      image: accupara/aosp@sha256:0338cd1b766cdc873e5cf039d38bd1eaec57990681e31a0a8d618109d7a1f87e
+      # image: ghcr.io/snx-r/cirrus:latest
       cpu: 8
       memory: 32G
       stateful: true
