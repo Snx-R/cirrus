@@ -15,5 +15,6 @@ repo sync system/bpfprogs
 
 source build/envsetup.sh
 lunch arrow_lavender-user
+export SELINUX_IGNORE_NEVERALLOWS=true
 m bacon
 Snx-R
