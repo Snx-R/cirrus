@@ -10,6 +10,9 @@ wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libtinfo5_6.3-2_a
 wget https://archive.ubuntu.com/ubuntu/pool/universe/n/ncurses/libncurses5_6.3-2_amd64.deb && sudo dpkg -i libncurses5_6.3-2_amd64.deb
 rm -f libncurses5_6.3-2_amd64.deb libtinfo5_6.3-2_amd64.deb
 
+rm -rf system/bpfprogs
+repo sync system/bpfprogs
+
 source build/envsetup.sh
 lunch arrow_lavender-user
 m bacon
