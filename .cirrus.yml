@@ -19,8 +19,8 @@ task:
           - /home/cirrus/ccache:/home/cirrus/ccache
           - /home/cirrus/.config:/home/cirrus/.config
           
-  cache_script:
-    - sudo apt update && sudo apt install ccache -y
+  # cache_script:
+    # - sudo apt update && sudo apt install ccache -y
 
   storage_script:
     - df -h .
