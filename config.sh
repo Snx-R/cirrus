@@ -1,7 +1,11 @@
 # add repo, dt, vt, kt etc.
 repo init --depth=1 --no-repo-verify -u https://Sa-Sajjad:$ght@github.com/Nusantara-SiXtY-N9/android_manifest_nusa.git -b 10
-# replace with your manifest
-git clone git@github.com:Sa-Sajjad/manifest.git --depth 1 -b ten-ksu .repo/local_manifests
+
+git clone https://github.com/Sa-Sajjad/android_device_xiaomi_violet device/xiaomi/violet
+git clone https://github.com/ResurrectionRemix-Devices/android_vendor_xiaomi_violet vendor/xiaomi/violet
+git clone https://github.com/ResurrectionRemix-Devices/android_kernel_xiaomi_violet kernel/xiaomi/violet
+rm -rf hardware/xiaomi; git clone https://github.com/LineageOS/android_hardware_xiaomi -b lineage-17.1 hardware/xiaomi
+
 # sync script
 repo sync -j$(nproc --all) --no-clone-bundle --no-tags --optimized-fetch --prune
 source build/envsetup.sh
