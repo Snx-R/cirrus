@@ -9,9 +9,9 @@ git clone https://github.com/ResurrectionRemix-Devices/android_kernel_xiaomi_vio
 repo sync -j$(nproc --all) --no-clone-bundle --no-tags --optimized-fetch --prune
 source build/envsetup.sh
 export TZ=Asia/Dhaka
-export ALLOW_MISSING_DEPENDENCIES=true
+# export ALLOW_MISSING_DEPENDENCIES=true
 
-lunch nad_lavender-user
+lunch nad_violet-user
 make installclean
 # export SELINUX_IGNORE_NEVERALLOWS=true
 # make api-stubs-docs || echo no problem
