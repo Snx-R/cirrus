@@ -10,5 +10,5 @@ export USE_GAPPS=true
 lunch nad_lavender-user
 make installclean
 mka nad
-export RELEASE=no
+export RELEASE=yes
 Snx-R
